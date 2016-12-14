@@ -80,7 +80,7 @@
     console.log(minutes)
     const minutesHandle = ((minutes/60) * 360) + 90;
     minutesHand.style.transform = `rotate(${minutesHandle}deg)`;
-    let hours = (new Date()).getHours();
+    const hours = (new Date()).getHours();
     if(hours > 12) {
       hours = hours -12;
       console.log("in" ,hours)
