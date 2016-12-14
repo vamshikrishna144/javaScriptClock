@@ -70,22 +70,17 @@
   const secondsHand = document.querySelector('.second-hand');
   const minutesHand = document.querySelector('.min-hand');
   const hoursHand = document.querySelector('.hour-hand')
-  console.log(secondsHand);
   function everySecond() {
     const seconds = (new Date()).getSeconds();
-    console.log(seconds);
     const secondsHandle = ((seconds/60) * 360) + 90;
     secondsHand.style.transform = `rotate(${secondsHandle}deg)`;
     const minutes = (new Date()).getMinutes();
-    console.log(minutes)
     const minutesHandle = ((minutes/60) * 360) + 90;
     minutesHand.style.transform = `rotate(${minutesHandle}deg)`;
     const hours = (new Date()).getHours();
     if(hours > 12) {
       hours = hours -12;
-      console.log("in" ,hours)
     }
-    console.log("out" ,hours)
 
     const hoursHandle = ((hours/60) * 360) + 90;
     hoursHand.style.transform = `rotate(${hoursHandle}deg)`;
